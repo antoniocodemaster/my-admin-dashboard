@@ -14,7 +14,7 @@ const Title = ({
       return <h1 className={`text-2xl font-bold ${className}`}>{title}</h1>;
     case 'SectionTitle':
       return (
-        <h2 className={`text-center text-xl font-bold mb-2 ${className}`}>
+        <h2 className={`text-xl font-bold mb-2 ${className}`}>
           {title}
         </h2>
       );
