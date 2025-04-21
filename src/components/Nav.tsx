@@ -18,9 +18,6 @@ const Nav = () => {
             <Link to="/admin-dashboard">Admin Dashboard</Link>
           </li>
           <li className="hover:text-gray-300 cursor-pointer">
-            <Link to="/login">Login</Link>
-          </li>
-          <li className="hover:text-gray-300 cursor-pointer">
             <Link to="/asdf">Error Page</Link>
           </li>
         </ul>

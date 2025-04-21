@@ -5,6 +5,7 @@ interface AuthState {
   token: string | null;
   userLoggedIn: () => boolean;
   loginWithCredentials: (email: string, password: string) => Promise<void>;
+  logout: () => void;
 }
 
 const useAuthState = create<AuthState>((set, get) => ({
@@ -20,6 +21,10 @@ const useAuthState = create<AuthState>((set, get) => ({
       console.error('Error logging in', error);
       throw error;
     }
+  },
+  logout: () => {
+    localStorage.removeItem('token');
+    set({ token: null });
   },
 }));
 

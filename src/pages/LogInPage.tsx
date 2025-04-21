@@ -75,7 +75,7 @@ const LogInPage = () => {
           <Text className="mt-4">
             Don't have an account?{' '}
             <Link
-              to="https://www.contentcreatortemplates.com/"
+              to="/login"
               className="text-green-500"
             >
               Sign up
