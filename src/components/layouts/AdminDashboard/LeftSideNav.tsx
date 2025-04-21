@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom';
 import Title from '../../typography/Title';
-import { HomeIcon, Bars3Icon, BookOpenIcon } from '@heroicons/react/24/outline';
+import {
+  HomeIcon,
+  Bars3Icon,
+  BookOpenIcon,
+  PowerIcon,
+} from '@heroicons/react/24/outline';
 
 const LeftSideNav = () => {
   return (
@@ -17,6 +22,17 @@ const LeftSideNav = () => {
       <Link className="dashboard-left-nav-link" to="/">
         <HomeIcon className="w-6 h-6" />
         Landing Page
+      </Link>
+      <Link
+        to="void(0)"
+        className="dashboard-left-nav-link !ml-0"
+        onClick={() => {
+          localStorage.removeItem('token');
+          window.location.reload();
+        }}
+      >
+        <PowerIcon className="w-6 h-6" />
+        Logout
       </Link>
     </div>
   );
