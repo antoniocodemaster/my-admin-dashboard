@@ -6,7 +6,7 @@ interface PrivateRouteProps {
 }
 
 const PrivateRoute = ({ children }: PrivateRouteProps) => {
-  const token = useAuthState((state) => state.token);
+  const { token } = useAuthState();
   return token ? <>{children}</> : <Navigate to="/login" replace />;
 };
 
